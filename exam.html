@@ -75,9 +75,9 @@
 			temp = new JustGage({
 				id: "temp",
 				value: 0.0,
-				decimals: 2,
+				decimals: 0,
 				min: 0.0,
-				max: 100.0,
+				max: 50.0,
 				title: "Temperature",
 				label: " C ", //หน่วย
 				labelFontColor:"#FFFFFF",
@@ -90,9 +90,9 @@
 			humi = new JustGage({
 				id: "humi",
 				value: 0.0,
-				decimals: 2,
+				decimals: 0,
 				min: 0.0,
-				max: 100.0,
+				max: 90.0,
 				title: "Humidity",
 				label: " %RH ", //หน่วย
 				labelFontColor:"#FFFFFF",
@@ -104,7 +104,7 @@
 			soil = new JustGage({
 				id: "soil",
 				value: 0.0,
-				decimals: 2,
+				decimals: 0,
 				min: 0.0,
 				max: 100.0,
 				title: "Soil Moisture",
@@ -113,20 +113,6 @@
 				titleFontColor:"#FFFFFF",
 				valueFontColor:"#FFFFFF",              
 			
-			});
-			
-			light = new JustGage({
-				id: "light",
-				value: 0.0,
-				decimals: 2,
-				min: 0.0,
-				max: 100.0,
-				title: "Light",
-				label: " % ", //หน่วย
-				labelFontColor:"#FFFFFF",
-				titleFontColor:"#FFFFFF",
-				valueFontColor:"#FFFFFF",              
-				          
 			});
 		};
 	</script>
@@ -200,4 +186,11 @@
 
 </head>
 </html>
+
+
+/* บรรทัดที่ 137 ที่คำสั่ง if(typeof(split_msg[2]) != 'undefined') 
+คำสั่ง Split_msg[2] หมายความว่า เป็นคำสั่งอาเรย์ ที่เริ่มนับจาก 0 
+โดยเราจะนับจาก 0 ,1, 2, 3, ไปเรื่อยๆ ตามจำนวนกราฟที่เราต้องการสร้าง
+ถ้าเรามีกราฟข้อมูล 3 กราฟ เราต้องสั่งให้ spilt_msg เป็น [2] เช่น split_msg[2]
+สมมุติ ถ้าเราต้องการแสดงค่ากราฟ 4 กราฟ เราต้องสั่งให้ split_msg = [3]  เช้น split_msg[3] */
 
